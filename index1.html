@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Negotiation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/wow.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+    <script type="text/javascript">
+    var end = new Date('09/28/2016 10:1 AM');
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+    var timer2;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+            document.getElementById('countdown1').innerHTML = 'EXPIRED!';
+            document.getElementById('countdown2').innerHTML = 'EXPIRED!';
+            document.getElementById('countdown3').innerHTML = 'EXPIRED!';
+            $('span.home_page_days').css('font-size', '17px');
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countdown').innerHTML = days;
+        document.getElementById('countdown1').innerHTML = hours;
+        document.getElementById('countdown2').innerHTML = minutes;
+        document.getElementById('countdown3').innerHTML = seconds;
+    }
+
+
+    timer = setInterval(showRemaining, 1000);
+    </script>
+</head>
+</head>
+
+<body>
+    <!-- ----------first page---------------- -->
+    <div class="col m12 s12 first_page">
+        <header class="row">
+            <div class="col m4 s4">
+                <img src="images/logo.png" class="pull-left logo">
+            </div>
+            <div class="col m8 s8">
+                <p class="signin">Login</p>
+                <p class="account1">Sign Up</p>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col l3 m3 s3"></div>
+            <div class="first_page_inner center-block text-center col l6 m6 s12">
+                <p class="text-center first_page_content">Welcome to EAuction!</p>
+                <!-- <p class="center">A place to sell and buy property</p> -->
+                <a class="waves-effect waves-light btn ownerLogin button_sell">SELL</a>
+                <a class="waves-effect waves-light btn buyerLogin button_sell">BUY</a>
+            </div>
+            <div class="col l3 m3 s3"></div>
+        </div>
+        <footer class="row">
+            <div class=" footer">
+                <p class="text-center">Copyright reserved @ eauction</p>
+                <div class="social">
+                    <i class="zmdi zmdi-facebook"></i>
+                    <i class="zmdi zmdi-twitter"></i>
+                    <i class="zmdi zmdi-instagram"></i>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- ---------------second page(seller) ------------------- -->
+    <section id="owner">
+        <header class="row">
+            <div class="col m4 s4">
+                <img src="images/logo.png" class="pull-left logo">
+            </div>
+            <div class="col m8 s8">
+                <p class="signin">Account</p>
+                <p class="account"><img src="img/user3.jpg" class="profile_img"></p>
+            </div>
+        </header>
+        <img src="img/back.png" class="back_button owner_back">
+        <div class="row">
+            <div class="col l3 m3 s3"></div>
+            <div class="col l6 m6 s12 seller_second_page card">
+                <p class="center property">Property Details</p>
+                <table class="table-responsive">
+                    <tr>
+                        <td class="td_label">Home Type: </td>
+                        <td>
+                            <div class="input-field">
+                                <select id="type">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1BHK">1BHK</option>
+                                    <option value="2BHK">2BHK</option>
+                                    <option value="3BHK">3BHK</option>
+                                    <option value="3BHK">Apartment</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_label">Location: </td>
+                        <td>
+                            <!-- <form> -->
+                            <div class="input-field">
+                                <input id="autocomplete" class="controls validate" type="text" placeholder="Enter a location">
+                            </div>
+                            <!-- </form> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_label">Property Area: </td>
+                        <td>
+                            <div class="input-field">
+                                <input id="Area" type="number" class="validate" placeholder="Enter Property area(in sq units)">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_label">Date: </td>
+                        <td>
+                            <input type="date" class="datepicker">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_label">Bidding Amount: </td>
+                        <td>
+                            <div class="input-field">
+                                <input id="amount" type="number" class="validate" placeholder="Bidding Amount">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="pull-right">
+                            <a class="modal-trigger waves-effect waves-light btn" id="bidding_detail" href="#modal1">Submit</a>
+                            <a class=" waves-effect waves-light btn disabled" id="bidding_detail1">Submit</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col m3 s3"></div>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal modal-fixed-footer">
+                <div class="modal-content row">
+                    <h4 class="center confrm_cont">Are you Sure?</h4>
+                    <div class="row">
+                        <div class="col l2 m2 s2"></div>
+                        <div class="col l8 m8 s8 confirmation_modal">
+                            <table class="table-responsive">
+                                <tbody>
+                                    <tr>
+                                        <td>Type: </td>
+                                        <td id="modal_type">heyy </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Location: </td>
+                                        <td id="modal_location">heyyy </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Area: </td>
+                                        <td id="modal_area">heyy </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Date: </td>
+                                        <td id="modal_date">hetyyy </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Biding Amount:</td>
+                                        <td id="modal_amount">32213</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col l2 m2 s2"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn confrm">Cancel</a>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn property_form cancl">Confirm</a>
+                </div>
+            </div>
+        </div>
+        <footer class="row">
+            <div class=" footer">
+                <p class="text-center">Copyright reserved @ eauction</p>
+                <div class="social">
+                    <i class="zmdi zmdi-facebook"></i>
+                    <i class="zmdi zmdi-twitter"></i>
+                    <i class="zmdi zmdi-instagram"></i>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <!-- ------------------third page(seller)------------------ -->
+    <section id="buyerlist">
+        <header class="row">
+            <div class="col m4 s4">
+                <img src="images/logo.png" class="pull-left logo">
+            </div>
+            <div class="col m8 s8">
+                <p class="signin">Account</p>
+                <p class="account"><img src="img/user3.jpg" class="profile_img"></p>
+            </div>
+        </header>
+        <img src="img/back.png" class="back_button property_back">
+        <div class="row main_row">
+            <div class="col l2 m2"></div>
+            <div class="card seller_card col l2 m2 s6">
+                <div class="card-image waves-effect waves-block waves-light card_img_sellr">
+                    <img class="activist" src="img/user1.jpg">
+                </div>
+                <div class="card-content seller_card_content">
+                    <span class="card-title grey-text text-darken-4">Sumi<i class="material-icons right">$ 300</i></span><span><br>123 Home, ABC Street XYZ City Center, 100201</span>
+                    <p> <a class="waves-effect waves-light btn activator negotiate_button ">Negotiate</a></p>
+                </div>
+                <div class="card-reveal">
+                    <p><i class="zmdi zmdi-close card-title negotiate_close"></i></p>
+                    <p class="grey-text text-darken-4 revised_bid_amt
+">Revised Bid Amount</p>
+                    <div class="input-field">
+                        <input id="amount" type="number" class="validate">
+                        <label for="amount">Bidding Amount</label>
+                    </div>
+                    <a class="waves-effect waves-light btn confirm_btn">Confirm</a>
+                </div>
+            </div>
+            <div class="col l1 m1 s1"></div>
+            <div class="card seller_card col l2 m2 s6">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activist" src="img/image4.jpg">
+                </div>
+                <div class="card-content seller_card_content">
+                    <span class="card-title grey-text text-darken-4">Ritu<i class="material-icons right">$ 300</i></span><span><br>123 Home, ABC Street XYZ City Center, 100201</span>
+                    <p> <a class="waves-effect waves-light btn activator negotiate_button ">Negotiate</a></p>
+                </div>
+                <div class="card-reveal">
+                    <p><i class="zmdi zmdi-close card-title negotiate_close"></i></p>
+                    <p class="grey-text text-darken-4 revised_bid_amt
+">Revised Bid Amount</p>
+                    <div class="input-field">
+                        <input id="amount" type="number" class="validate">
+                        <label for="amount">Bidding Amount</label>
+                    </div>
+                    <a class="waves-effect waves-light btn confirm_btn">Confirm</a>
+                </div>
+            </div>
+            <div class="col l1 m1"></div>
+            <div class="card seller_card col l2 m2 s6">
+                <div class="card-image waves-effect waves-block waves-light card_img_sellr">
+                    <img class="activist" src="img/image6.jpg">
+                </div>
+                <div class="card-content seller_card_content">
+                    <span class="card-title grey-text text-darken-4">Subhash<i class="material-icons right">$ 300</i></span><span><br>123 Home, ABC Street XYZ City Center, 100201</span>
+                    <p> <a class="waves-effect waves-light btn activator negotiate_button ">Negotiate</a></p>
+                </div>
+                <div class="card-reveal">
+                    <p><i class="zmdi zmdi-close card-title negotiate_close"></i></p>
+                    <p class="grey-text text-darken-4 revised_bid_amt
+">Revised Bid Amount</p>
+                    <div class="input-field">
+                        <input id="amount" type="number" class="validate">
+                        <label for="amount">Bidding Amount</label>
+                    </div>
+                    <a class="waves-effect waves-light btn confirm_btn">Confirm</a>
+                </div>
+            </div>
+            <div class="col l2 m2"></div>
+        </div>
+        <footer class="row">
+            <div class=" footer">
+                <p class="text-center">Copyright reserved @ eauction</p>
+                <div class="social">
+                    <i class="zmdi zmdi-facebook"></i>
+                    <i class="zmdi zmdi-twitter"></i>
+                    <i class="zmdi zmdi-instagram"></i>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <!-- -------------- third page seller end --------------- -->
+    <!-- ------------------Owner-End------------------ -->
+    <section id="owner_end">
+        <header class="row">
+            <div class="col m4 s4">
+                <img src="images/logo.png" class="pull-left logo">
+            </div>
+            <div class="col m8 s8">
+                <p class="signin">Account</p>
+                <p class="account"><img src="img/user3.jpg" class="profile_img"></p>
+            </div>
+        </header>
+        <div class="row congrates_main">
+            <p class="center congrates">Congratulation!
+                <br>Offer has been accepted.</p>
+        </div>
+        <footer class="row">
+            <div class=" footer">
+                <p class="text-center">Copyright reserved @ eauction</p>
+                <div class="social">
+                    <i class="zmdi zmdi-facebook"></i>
+                    <i class="zmdi zmdi-twitter"></i>
+                    <i class="zmdi zmdi-instagram"></i>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <!-- -------------- third page seller end --------------- -->
+    <!-- ----------buyer 1st page---------------- -->
+    <section class="buyer">
+        <div class="col m12 s12 ">
+            <header class="row">
+                <div class="col m4 s4">
+                    <img src="images/logo.png" class="pull-left logo">
+                </div>
+                <div class="col m8 s8">
+                    <p class="signin">Account</p>
+                    <p class="account"><img src="img/user3.jpg" class="profile_img"></p>
+                </div>
+            </header>
+            <img src="img/back.png" class="back_button buyer_back">
+            <div class="first_page_inner center-block text-center">
+                <p class="text-center first_page_content">FIND THE SIMPLEST WAY HOME</p>
+                <div class="row">
+                    <div class="col s10 m10 offset-m1 offset-s1 padding_zero input_fld">
+                        <div class="card row">
+                            <div class="card-content input_buyer">
+                                <div class="col m10 s10">
+                                    <input id="autocomplete2" class="controls" type="text" placeholder="Enter a location">
+                                </div>
+                                <div class="col m2 s2"><a class="waves-effect waves-light btn-large search_btn">SEARCH</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="row">
+                <div class=" footer">
+                    <p class="text-center">Copyright reserved @ eauction</p>
+                    <div class="social">
+                        <i class="zmdi zmdi-facebook"></i>
+                        <i class="zmdi zmdi-twitter"></i>
+                        <i class="zmdi zmdi-instagram"></i>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+    <!-- -------------------- seller list for buyer --------------- -->
+    <section id="seller_list">
+        <header class="row">
+            <div class="col m4 s4">
+                <img src="images/logo.png" class="pull-left logo">
+            </div>
+            <div class="col m8 s8">
+                <p class="signin">Account</p>
+                <p class="account"><img src="img/user3.jpg" class="profile_img"></p>
+            </div>
+        </header>
+        <img src="img/back.png" class="back_button seller_list_back">
+        <div class="row">
+            <p class="center listed_property">Listed Property</p>
+            <!-- <div class="col l1 m1 s1"></div> -->
+            <div class="col l3 m3 s6 listd_prop_rit">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <div class="sharing">
+                            <i class="zmdi zmdi-favorite"></i>
+                            <i class="zmdi zmdi-share"></i>
+                        </div>
+                        <img class="" src="img/home33.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title grey-text text-darken-4">1BHK<i class="material-icons right">$ 500</i></span>
+                        <p class="center center-block"><a class="waves-effect waves-light btn detail_btn" data-house="1">Details</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l1 m1"></div>
+            <div class="col l3 m3 s6">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <div class="sharing">
+                            <i class="zmdi zmdi-favorite"></i>
+                            <i class="zmdi zmdi-share"></i>
+                        </div>
+                        <img class="" src="img/img2c.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title grey-text text-darken-4">2BHK<i class="material-icons right">$ 400</i></span>
+                        <p class="center center-block"><a class="waves-effect waves-light btn detail_btn" data-house="2">Details</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l1 m1"></div>
+            <div class="col l3 m3 s6">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <div class="sharing">
+                            <i class="zmdi zmdi-favorite"></i>
+                            <i class="zmdi zmdi-share"></i>
+                        </div>
+                        <img class="" src="img/img2a.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title grey-text text-darken-4">3BHK<i class="material-icons right">$ 600</i></span>
+                        <p class="center center-block"><a class="waves-effect waves-light btn detail_btn" data-house="3">Details</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="row">
+            <div class=" footer">
+                <p class="text-center">Copyright reserved @ eauction</p>
+                <div class="social">
+                    <i class="zmdi zmdi-facebook"></i>
+                    <i class="zmdi zmdi-twitter"></i>
+                    <i class="zmdi zmdi-instagram"></i>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <!-- ----------property details ------ -->
+    <section id="property_details">
+        <header class="row">
+            <div class="col m4 s4">
+                <img src="images/logo.png" class="pull-left logo">
+            </div>
+            <div class="col m8 s8">
+                <p class="signin">Account</p>
+                <p class="account"><img src="img/user3.jpg" class="profile_img"></p>
+            </div>
+        </header>
+        <img src="img/back.png" class="back_button property_details_back">
+        <div class="row">
+            <p class=" prop_hdr">Property Details</p>
+            <div class="col l6 m6 s12">
+                <div class="carousel carousel-slider center" data-indicators="true">
+                    <!-- <div class="carousel-fixed-item center">
+                        <a class="btn waves-effect white grey-text darken-text-2">button</a>
+                    </div> -->
+                    <div class="carousel-item white-text" href="#one!">
+                        <img src="img/img2a.jpg">
+                        <!-- <h2>First Panel</h2>
+                        <p class="white-text">This is your first panel</p> -->
+                    </div>
+                    <div class="carousel-item white-text" href="#three!">
+                        <img src="img/img2b.jpg">
+                        <!-- <h2>Third Panel</h2> -->
+                        <!-- <p class="white-text">This is your third panel</p> -->
+                    </div>
+                    <div class="carousel-item white-text" href="#four!">
+                        <img src="img/img2c.jpg">
+                        <!-- <h2>Fourth Panel</h2> -->
+                        <!-- <p class="white-text">This is your fourth panel</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col l6 m6 s12">
+                <div class="col l12 m12 s12 home_page_right" id="clockdiv">
+                    <div class="col l3 m3 s3 homepage_days_date raleway_regular">
+                        <span id="countdown" class="home_page_days text-center"></span>
+                        <div class="smalltext raleway_light">Days</div>
+                    </div>
+                    <div class="col l3 m3 s3 homepage_days_date raleway_regular text-center">
+                        <span id="countdown1" class="home_page_days text-center"></span>
+                        <div class="smalltext raleway_light">Hours</div>
+                    </div>
+                    <div class="col l3 m3 s3 homepage_days_date raleway_regular text-center">
+                        <span id="countdown2" class="home_page_days text-center"></span>
+                        <div class="smalltext raleway_light">Minutes</div>
+                    </div>
+                    <div class="col l3 m3 s3 homepage_days_date1 raleway_regular text-center">
+                        <span id="countdown3" class="home_page_days text-center"></span>
+                        <div class="smalltext raleway_light">Seconds</div>
+                    </div>
+                </div>
+                <table class="table-responsive buyer_table">
+                    <tbody>
+                        <tr>
+                            <td class="td_buyer">Bidding: </td>
+                            <td id="td_bid">$ 400</td>
+                        </tr>
+                        <tr>
+                            <td class="td_buyer">Date: </td>
+                            <td id="td_date">20th Sept 2016</td>
+                        </tr>
+                        <tr>
+                            <td class="td_buyer">Location: </td>
+                            <td id="td_location">Bangalore </td>
+                        </tr>
+                        <tr>
+                            <td class="td_buyer">Square footage: </td>
+                            <td id="td_area">1008 sq units</td>
+                        </tr>
+                        <tr>
+                            <td class="td_buyer">Year Built: </td>
+                            <td id="td_buildYear">2007</td>
+                        </tr>
+                        <tr>
+                            <td class="td_buyer">Bedrooms</td>
+                            <td id="td_bedroom">3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="input-field col s6 input_fld">
+                    <input id="amount" type="text" class="validate">
+                    <label for="amount">Enter amount</label>
+                    <a class="waves-effect waves-light btn bid_btn modal-trigger" href="#modal2">Bid</a>
+                </div>
+            </div>
+        </div>
+        <footer class="row">
+            <div class=" footer">
+                <p class="text-center">Copyright reserved @ eauction</p>
+                <div class="social">
+                    <i class="zmdi zmdi-facebook"></i>
+                    <i class="zmdi zmdi-twitter"></i>
+                    <i class="zmdi zmdi-instagram"></i>
+                </div>
+            </div>
+        </footer>
+        <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+        <!-- Modal Structure -->
+        <div id="modal2" class="modal">
+            <div class="modal-content center">
+                <h5>Confirmation</h5>
+                <p>Bidding amount for home is: $<span id="conf_bid"> 432</span></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn  cancl">Cancel</a>
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn  contnu">Continue</a>
+            </div>
+        </div>
+    </section>
+    <!-- ----------------------------three options-------------------- -->
+    <section id="options_list">
+        <header class="row">
+            <div class="col m4 s4">
+                <img src="images/logo.png" class="pull-left logo">
+            </div>
+            <div class="col m8 s8">
+                <p class="signin">Account</p>
+                <p class="account"><img src="img/user3.jpg" class="profile_img"></p>
+            </div>
+        </header>
+        <img src="img/back.png" class="back_button options_list_back">
+        <div class="row">
+            <div class="switch">
+                <label>
+                    Unsuccessfully
+                    <input id="toggle" type="checkbox" checked>
+                    <span class="lever"></span> Successfully
+                </label>
+            </div>
+            <div id="success">
+                <p class="center revised_bt">Revised bid from the owner is $550</p>
+                <div class="col l2 m2 s2"></div>
+                <div class="col l8 m8 s8 allbtn center center-block">
+                    <a class="waves-effect waves-light btn options_button" onclick="Materialize.toast('Accepted', 4000)">Accept</a>
+                    <a class="waves-effect waves-light btn options_button modal-trigger" href="#modal3">Negotiate</a>
+                    <a class="waves-effect waves-light btn options_button" onclick="Materialize.toast('Denied', 4000)">Denied</a>
+                </div>
+                <div class="col l2 m2 s2"></div>
+            </div>
+            <div id="unsucess">
+                <p class="center listed_property">Listed Property</p>
+                <!-- <div class="col l1 m1 s1"></div> -->
+                <div class="col l3 m3 s6 listd_prop_rit">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <div class="sharing">
+                                <i class="zmdi zmdi-favorite"></i>
+                                <i class="zmdi zmdi-share"></i>
+                            </div>
+                            <img class="" src="img/img2a.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title grey-text text-darken-4">1BHK<i class="material-icons right">$ 500</i></span>
+                            <p class="center center-block"><a class="waves-effect waves-light btn disabled">Details <i class="zmdi zmdi-lock-outline"></i></a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l1 m1"></div>
+                <div class="col l3 m3 s6">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <div class="sharing">
+                                <i class="zmdi zmdi-favorite"></i>
+                                <i class="zmdi zmdi-share"></i>
+                            </div>
+                            <img class="" src="img/home33.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title grey-text text-darken-4">1BHK<i class="material-icons right">$ 500</i></span>
+                            <p class="center center-block"><a class="waves-effect waves-light btn disabled">Details <i class="zmdi zmdi-lock-outline"></i></a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l1 m1"></div>
+                <div class="col l3 m3 s6">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <div class="sharing">
+                                <i class="zmdi zmdi-favorite"></i>
+                                <i class="zmdi zmdi-share"></i>
+                            </div>
+                            <img class="" src="img/home33.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title grey-text text-darken-4">1BHK<i class="material-icons right">$ 500</i></span>
+                            <p class="center center-block"><a class="waves-effect waves-light btn disabled">Details <i class="zmdi zmdi-lock-outline"></i></a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="row">
+            <div class=" footer">
+                <p class="text-center">Copyright reserved @ eauction</p>
+                <div class="social">
+                    <i class="zmdi zmdi-facebook"></i>
+                    <i class="zmdi zmdi-twitter"></i>
+                    <i class="zmdi zmdi-instagram"></i>
+                </div>
+            </div>
+        </footer>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <h5 class="center">Final Negotiation Amount</h5>
+                <div class="row">
+                    <div class="col l7 offset-l3 s1 offset-s6">
+                        <div class="input-field amount_last">
+                            <input id="amt" type="text" class="validate">
+                            <label for="amt">Negotiation amount</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn cancl_btn">Cancel</a>
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn send_btn" onclick="Materialize.toast('Sent Successfully', 4000)">Send</a>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+
+
+    // ----for the modal -------
+
+    $(document).ready(function() {
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+    });
+
+
+    /// carousel 
+
+    $('.carousel.carousel-slider').carousel({
+        full_width: true
+    });
+    </script>
+    <script>
+    function initMap() {
+        var input = /** @type {!HTMLInputElement} */ (
+            document.getElementById('autocomplete'));
+        var types = document.getElementById('type-selector');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.addListener('place_changed', function() {
+            marker.setVisible(false);
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+                window.alert("Autocomplete's returned place contains no geometry");
+                return;
+            }
+            var address = '';
+            if (place.address_components) {
+                address = [
+                    (place.address_components[0] && place.address_components[0].short_name || ''),
+                    (place.address_components[1] && place.address_components[1].short_name || ''),
+                    (place.address_components[2] && place.address_components[2].short_name || '')
+                ].join(' ');
+            }
+        });
+        autocomplete.setTypes('address');
+
+        autocomplete2 = new google.maps.places.Autocomplete(document.getElementById('autocomplete2'), {
+            types: ['geocode']
+        });
+        google.maps.event.addListener(autocomplete2, 'place_changed', function() {
+            fillInAddress();
+        });
+    }
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+    </script>
+    <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiif-JuYFxiKnuptWiFqjpR74KAEggz9g&libraries=places&callback=initMap" async defer></script>
+</body>
+
+</html>

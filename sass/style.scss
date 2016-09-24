@@ -1,0 +1,566 @@
+@mixin header {
+    /* background: rgba(255, 255, 255, 0.88); */
+    background: rgba(84, 84, 84, 0.88);
+    img {
+        width: 50px;
+        height: 50px;
+        margin-top: 7px;
+        margin-left: 1em;
+        position: relative;
+        top: 0px;
+    }
+    .signin {
+        margin: .1em 2em 0em 1em;
+        float: right;
+        cursor: pointer;
+        position: relative;
+        top: 20px;
+    }
+    .account {
+        @extend .signin;
+        top: 0px;
+    }
+    .account1 {
+        @extend .signin;
+    }
+}
+
+@mixin absolute_page {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+@mixin footer {
+    .footer {
+        /* background: rgba(255, 255, 255, 0.7); */
+        background: rgba(84, 84, 84, 0.88);
+        height: 3em;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+    .social {
+        position: relative;
+        bottom: 2em;
+        font-size: 1.5em;
+        left: -3em;
+        @extend .float_right;
+        .zmdi-facebook {
+            margin: 0 1em;
+        }
+        & :hover {
+            color: #0070ff;
+            cursor: pointer;
+        }
+        .zmdi-twitter {
+            @extend zmdi-facebook !optional;
+        }
+        .zmdi-instagram {
+            @extend .zmdi-facebook !optional;
+        }
+    }
+}
+
+@mixin background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.back_button {
+    position: relative;
+    left: 2em;
+    cursor: pointer
+}
+
+.input-width {
+    width: 75%;
+    text-indent: 8px;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.padding_zero {
+    padding: 0 !important;
+}
+
+.float_right {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+td {
+    padding: 0px 6px;
+}
+
+.input-field {
+    margin-top: 0;
+}
+
+img.activist {
+    width: 70%;
+}
+
+body {
+    overflow: hidden;
+}
+
+.profile_img {
+    border-radius: 50%;
+    position: relative;
+    left: 1em;
+    top: -.1em;
+}
+
+.first_page {
+    background-image: url(../img/bg2.jpg);
+    @include background;
+    display: block;
+    @include absolute_page;
+    header {
+        @include header;
+        background: rgba(255, 255, 255, 0.88);
+    }
+    .first_page_inner {
+        .first_page_content {
+            font: {
+                size: 3em;
+            }
+            color:black;
+            margin-top: 24%;
+            border: 1px solid rgba(255, 255, 255, 0.63);
+            background: rgba(255, 255, 255, 0.63);
+        }
+        a.button_sell {
+            margin: 2em 1em 12.59em 1em;
+        }
+    }
+    footer {
+        @include footer;
+        .footer {
+            background: rgba(255, 255, 255, 0.88);
+        }
+    }
+}
+
+#owner {
+    background-image: url(../img/bg3.jpg);
+    @include background;
+    @include absolute_page;
+    header {
+        @include header;
+        background: rgba(193, 188, 188, 0.88);
+        img.profile_img {
+            @extend .profile_img;
+        }
+    }
+    display: none;
+    .center {
+        @extend .text-center;
+    }
+    .seller_second_page {
+        background: rgba(0, 0, 0, 0.61);
+        color: white;
+        margin-top: 1.2em;
+        .property {
+            font: {
+                size: 2em;
+            }
+            margin:10px 0;
+        }
+        table {
+            width: 100%;
+            margin: 4.2% 2%;
+            input[type="text"] {
+                @extend .input-width;
+            }
+            input[type="number"] {
+                @extend .input-width;
+            }
+            td.td_label {
+                font-weight: bold;
+                letter-spacing: 1px;
+                font-size: 1.1em;
+                width: 40%;
+                position: relative;
+                left: 3em;
+            }
+            td#bidding_detail {
+                display: none;
+            }
+        }
+    }
+    footer {
+        @include footer;
+    }
+    .confrm_cont {
+        margin-top: 1.5em;
+    }
+    .confirmation_modal {
+        margin-top: 3em;
+        font-size: 1.2em;
+        color: #3c3939;
+        margin-left: 4em;
+        line-height: 1.8em;
+    }
+    .confrm {
+        margin-right: 2em;
+    }
+    .cancl {
+        position: relative;
+        right: 2em;
+    }
+}
+
+#buyerlist {
+    display: none;
+    @include absolute_page;
+    background: white;
+    height: 100vh;
+    header {
+        @include header;
+    }
+    .main_row {
+        margin: 3.5em 0;
+    }
+    .seller_card {
+        padding: 0;
+        .card_img_sellr {
+            height: 190px;
+            overflow: hidden;
+        }
+        .seller_card_content {
+            padding: 0 7px;
+        }
+        .card-title {
+            font: {
+                size: 1.2em;
+            }
+        }
+        .negotiate_close {
+            float: right;
+        }
+        .revised_bid_amt {
+            margin-top: 4em;
+            font-size: 1.2em;
+        }
+        .confirm_btn {
+            position: relative;
+            left: 1.85em;
+            top: 2em;
+        }
+        .negotiate_button {
+            padding: 0px 11px;
+            font-size: 10px;
+            position: relative;
+            left: 6em;
+            margin-top: 1em;
+            margin-Bottom: 1em;
+        }
+    }
+    footer {
+        @include footer;
+    }
+}
+
+.picker__date-display {
+    padding-bottom: 5px;
+}
+
+.picker__weekday-display {
+    margin-bottom: 0;
+}
+
+.picker__calendar-container {
+    padding: 0 1rem;
+    height: 19em;
+    border-bottom: 1px solid #cecaca;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.buyer {
+    background-image: url(../img/bg2.jpg);
+    @include background;
+    display: none;
+    header {
+        @include header;
+        background: rgba(193, 188, 188, 0.88);
+    }
+    .first_page_content {
+        font-size: 2.5em;
+        margin-top: 11%;
+    }
+    .input_fld {
+        margin-bottom: 12em;
+        .input_buyer {
+            padding: 0;
+            margin-bottom: 2em;
+            input#autocomplete2 {
+                position: relative;
+                left: 4em;
+                text-indent: 8px;
+                top: .8em;
+            }
+        }
+        .search_btn {
+            padding: 0px 1em;
+            height: 51px;
+            position: relative;
+            left: -2em;
+            top: 8px;
+        }
+    }
+    footer {
+        @include footer;
+    }
+}
+
+#owner_end {
+    background: white;
+    @include absolute_page;
+    @include background;
+    display: none;
+    z-index: 99;
+    header {
+        @include header;
+        background: rgba(193, 188, 188, 0.88);
+    }
+    .congrates_main {
+        margin-top: 15%;
+        .congrates {
+            font: {
+                size: 2.5em;
+            }
+        }
+    }
+    footer {
+        @include footer;
+    }
+}
+
+.waves-effect {
+    z-index: 0;
+}
+
+.waves-effect {
+    z-index: 0;
+}
+
+#seller_list {
+    display: none;
+    @include background;
+    @include absolute_page;
+    background: white;
+    .listed_property {
+        font: {
+            size: 2.5em;
+        }
+        margin-top:0;
+    }
+    .sharing {
+        position: absolute;
+        right: 0;
+        font: {
+            size: 1.5em;
+        }
+        .zmdi-share {
+            margin: 0 .5em;
+        }
+        .zmdi-favorite {
+            @extend .zmdi-share !optional;
+            &:hover {
+                color: #ef1010;
+            }
+            &:focus {
+                color: #ef1010;
+            }
+        }
+    }
+    .listd_prop_rit {
+        margin-left: 3.5em;
+    }
+    header {
+        @include header;
+    }
+    footer {
+        @include footer;
+    }
+}
+
+#property_details {
+    display: none;
+    @include background;
+    @include absolute_page;
+    background: white;
+    header {
+        @include header;
+    }
+    .prop_hdr {
+        font: {
+            size: 2em;
+        }
+        margin-left:2em;
+        margin-top:0;
+    }
+    .home_page_right {
+        border: 1px solid #eaeaea;
+        .homepage_days_date {
+            border-right: 1px solid #eaeaea;
+            .home_page_days {
+                font-size: 2em;
+                color: #08a1ec;
+            }
+        }
+        .homepage_days_date1 {
+            .home_page_days {
+                font-size: 2em;
+                color: #08a1ec;
+            }
+        }
+    }
+    table.buyer_table {
+        width: 53%;
+        margin-top: 15%;
+        font: {
+            size: 1.13em;
+        }
+        td.td_buyer {
+            font: {
+                weight: 600;
+            }
+        }
+    }
+    .input_fld {
+        margin-top: 2em;
+    }
+    .bid_btn {
+        position: relative;
+        left: 20em;
+        top: -3.7em;
+    }
+    footer {
+        @include footer;
+    }
+    .cancl {
+        margin-right: 14em;
+    }
+    .contnu {
+        margin-right: 2em;
+    }
+}
+
+#options_list {
+    display: none;
+    background: white;
+    @include background;
+    @include absolute_page;
+    #unsucess {
+        display: none;
+        overflow: hidden;
+         .listed_property {
+        font: {
+            size: 2.5em;
+        }
+        margin-top:0;
+    }
+    .sharing {
+        position: absolute;
+        right: 0;
+        font: {
+            size: 1.5em;
+        }
+        .zmdi-share {
+            margin: 0 .5em;
+        }
+        .zmdi-favorite {
+            @extend .zmdi-share !optional;
+            &:hover {
+                color: #ef1010;
+            }
+            &:focus {
+                color: #ef1010;
+            }
+        }
+    }
+        .listd_prop_rit {
+            margin-left: 3.5em;
+        }
+    }
+    header {
+        @include header;
+    }
+    .switch {
+        position: absolute;
+        right: 4em;
+        top: 85%;
+    }
+    .revised_bt {
+        font: {
+            size: 2.5em;
+        }
+        margin-top:10%;
+    }
+    .allbtn {
+        .options_button {
+            margin: 0 1em;
+        }
+    }
+    footer {
+        @include footer;
+    }
+    .amount_last {
+        margin-top: 2em;
+    }
+    .modal-footer {
+        margin-left: -10.5em;
+        .cancl_btn {
+            margin: 0 2em;
+        }
+        .send_btn {
+            margin: 0 2em;
+        }
+    }
+}
+
+#unsuccessfully_seller_list {
+    display: none;
+    @extend #seller_list;
+    @include background;
+    @include absolute_page;
+    background: white;
+    .zmdi-lock-outline {
+        color: #1b1b1b;
+        position: relative;
+        left: 15px;
+    }
+}
+
+.carousel.carousel-slider {
+    height: 400px !important;
+    width: 90%;
+    margin-left: 3em;
+}
+
+.carousel .indicators .indicator-item.active {
+    background: #05d1ff;
+}
+
+.carousel .indicators .indicator-item {
+    background: white;
+    margin: 5px;
+}

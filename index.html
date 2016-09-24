@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Eauction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/new_css.css">
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+    <script type="text/javascript">
+    var end = new Date('09/22/2016 10:1 AM');
+    var end2 = new Date('09/21/2016 10:1 AM');
+
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+    var timer2;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+            document.getElementById('countdown1').innerHTML = 'EXPIRED!';
+            document.getElementById('countdown2').innerHTML = 'EXPIRED!';
+            document.getElementById('countdown3').innerHTML = 'EXPIRED!';
+            $('span.home_page_days').css('font-size', '17px');
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countdown').innerHTML = days;
+        document.getElementById('countdown1').innerHTML = hours;
+        document.getElementById('countdown2').innerHTML = minutes;
+        document.getElementById('countdown3').innerHTML = seconds;
+    }
+
+    function showRemaining2() {
+        var now = new Date();
+        var distance = end2 - now;
+        if (distance < 0) {
+
+            clearInterval(timer2);
+            document.getElementById('xcountdown').innerHTML = 'EXPIRED!';
+            document.getElementById('xcountdown1').innerHTML = 'EXPIRED!';
+            document.getElementById('xcountdown2').innerHTML = 'EXPIRED!';
+            document.getElementById('xcountdown3').innerHTML = 'EXPIRED!';
+            $('span.home_page_days').css('font-size', '17px');
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('xcountdown').innerHTML = days;
+        document.getElementById('xcountdown1').innerHTML = hours;
+        document.getElementById('xcountdown2').innerHTML = minutes;
+        document.getElementById('xcountdown3').innerHTML = seconds;
+    }
+
+    timer = setInterval(showRemaining, 1000);
+    timer2 = setInterval(showRemaining2, 1000);
+    </script>
+</head>
+
+<body>
+    <div class="container col-md-12 col-sm-12 col-xs-12">
+        <div class="row main_header">
+            <div class="col-md-2"><img src="images/logo.png" class="logo"></div>
+        </div>
+        <!-- ----------------first page --------------------- -->
+        <div class="col-md-12 col-sm-12 col-xs-12 main_page_wrapper">
+            <div class="col-md-1 col-sm-1"></div>
+            <div class="col-md-5 col-sm-5 col-xs-12 text-center center-block ">
+                <img src="images/pic2.png" class="ownerLogin wow zoomIn">
+                <p class="roboto_reg main_page_wrapper_para">SELLER</p>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-12 text-center center-block ">
+                <img src="images/pic1.png" class="buyerLogin wow zoomIn">
+                <p class="main_page_wrapper_para roboto_reg ">BUYER</p>
+            </div>
+            <div class="col-md-1 col-sm-1"></div>
+        </div>
+    </div>
+    <div class="container col-md-12 col-sm-12 col-xs-12" id="owner">
+        <img src="images/arrows.png" class="pull-left owner_back arrow">
+        <p class="selct_property text-center raleway_thin">Select Property Type</p>
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-md-8 col-sm-8 col-xs-12 owner_first_row raleway_regular">
+            <div class="col-md-4 col-sm-4 col-xs-12 text-center center-block owner_property">
+                <img src="images/home.png" class="owner_choice property_form">
+                <p class="owner_choice_para">Single Family</p>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 text-center center-block owner_property">
+                <img src="images/art.png" class="owner_choice property_form">
+                <p>3 BHK</p>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 text-center center-block owner_property">
+                <img src="images/hotel.png" class="owner_choice property_form">
+                <p>Apartment</p>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 text-center center-block owner_property">
+                <img src="images/house-1.png" class="owner_choice property_form">
+                <p>2BHK</p>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 text-center center-block owner_property">
+                <img src="images/house.png" class="owner_choice property_form">
+                <p>Town Hall</p>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 text-center center-block owner_property">
+                <img src="images/police-station.png" class="owner_choice property_form">
+                <p>Commercial</p>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2"></div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 " id="property_formation">
+        <img src="images/arrows.png" class="pull-left property_back arrow">
+        <p class="prop_details text-center raleway_thin">Property Details</p>
+        <div class="col-md-3 col-sm-3 "></div>
+        <div class="col-md-6 col-sm-6 col-xs-12 property_main_form">
+            <div class="col-md-12 col-sm-12 col-xs-12" id="imagePlaceHolder"></div>
+            <table>
+                <form>
+                    <tr>
+                        <td class="table_font raleway_semibold">Starting Bid</td>
+                        <td class="table_td5">
+                            <span class="dollar">$</span>
+                            <input type="number" name="" class="input_form" min="0" step="0.01" id="input0" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_td table_font raleway_semibold">Area<span class="infeet"> (in Feet)</span></td>
+                        <td class="table_td3">
+                            <input type="number" name="" class="input_form" id="input1" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_td2 table_font raleway_semibold">Location</td>
+                        <td class="table_td4">
+                            <input type="text" name="" class="input_form" id="input2" required>
+                        </td>
+                    </tr>
+            </table>
+            <button id="bidding_detail" type="submit" class="text-center center-block ok_button ok_marg raleway_regular">OK</button>
+            </form>
+        </div>
+        <!-- Modal -->
+        <div id="detail_confirm_modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header confirm_head">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <!-- <h4 class="modal-title">Modal Header</h4> -->
+                    </div>
+                    <div class="modal-body raleway_regular">
+                        <div class="col-md-12 cl-sm-12 col-xs-12 text-center center-block">
+                            <p class="rusure">Are you Sure?</p>
+                            <table class="table confirming_table">
+                                <tbody>
+                                    <tr>
+                                        <td class="td_bid1">Bid: </td>
+                                        <td id="modal_bid"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td_bid2">Area: </td>
+                                        <td id="modal_area"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td_bid3">Location:</td>
+                                        <td id="modal_location"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button id="confirm_bid" data-dismiss="modal" class="ok_button data_modal">Confirm</button>
+                            <button data-dismiss="modal" class="modal_rusure">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer confirm_head">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 "></div>
+    </div>
+    <div class="container col-md-12 col-sm-12 col-xs-12" id="bidlist">
+        <img src="images/arrows.png" class="pull-left confirm_back arrow">
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-md-8 col-sm-8 col-xs-12">
+            <div class="panel panel-primary container col-md-12 col-sm-12 col-xs-12">
+                <div class="panel-heading container col-md-12 col-sm-12 col-xs-12">
+                    <h3 class="panel-title raleway_semibold">Biddings on Property</h3>
+                </div>
+                <div class="panel-body container col-md-12 col-sm-12 col-xs-12">
+                    <section class="card featured col-md-12 col-sm-12 col-xs-12">
+                        <aside class="col-md-4 col-sm-4 col-xs-3"><img src="images/pic1.png"></aside>
+                        <article class="col-md-6 col-sm-6 col-xs-7 raleway_medium" id="buyers_feature">
+                            <p>$ 550</p>
+                            <p>Veeru</p>
+                            <p>123 Home, ABC Street</p>
+                            <p>XYZ City Center, 100201</p>
+                        </article>
+                        <button class="col-md-2 col-sm-2 col-xs-2 ok_button negotiate_btn" data-toggle="modal" data-target="#negotiate_modal">Negotiate</button>
+                    </section>
+                    <div class="col-md-1 col-sm-1"></div>
+                    <section class="card col-md-5 col-sm-5 col-xs-12 ngo_card">
+                        <div class="col-md-5 col-sm-5 col-xs-6 ">
+                            <img src="images/pic5.png" class="negotiate_img">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7 negotiat_modal raleway_regular">
+                            <p>$ 400</p>
+                            <p>Reena</p>
+                            <p>123 Home, ABC Street XYZ City Center, 100201</p>
+                            <button class="ok_button nego_btn" data-toggle="modal" data-target="#negotiate_modal">Negotiate</button>
+                        </div>
+                    </section>
+                    <!-- <div class="col-md-1 col-sm-1"></div> -->
+                    <section class="card col-md-5 col-sm-5 col-xs-12">
+                        <div class="col-md-5 col-sm-5 col-xs-6">
+                            <img src="images/pic6.png" class="negotiate_img">
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7 negotiat_modal raleway_regular">
+                            <p>$ 400</p>
+                            <p>Vikram</p>
+                            <p>123 Home, ABC Street XYZ City Center, 100201</p>
+                            <button class="ok_button nego_btn" data-toggle="modal" data-target="#negotiate_modal">Negotiate</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2"></div>
+        <!-- Modal -->
+        <div id="negotiate_modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header confirm_head">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center raleway_bold">Revised Bid Amount</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center center-block raleway_regular">
+                            <form>
+                                <p>
+                                    <!-- Updated Bid amount: -->
+                                    <span class="dollar1">$</span>
+                                    <input type="text" name="" class="updated_bid" autofocus required>
+                                </p>
+                                <button id="updated_bid" class="ok_button" type="submit">Confirm</button>
+                                <button data-dismiss="modal" class="modal_rusure">Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer confirm_head">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container col-md-12 col-sm-12 col-xs-12 mssg_screen text-center raleway_thin" id="message_screen"><img src="images/happy.jpg"> Congratulations!
+        <br> Offer has been accetpted. </div>
+    <!-- ----------------------buyer---------------------- -->
+    <div class="container col-md-12 col-sm-12 col-xs-12" id="buyer">
+        <div class="col-md-12 col-sm-12 col-xs-12 buyer">
+            <img src="images/arrows.png" class="pull-left buyer_back arrow">
+            <div class="col-md-12 col-sm-12 col-xs-12 buyer_innr raleway_regular">
+                <p class="selct_buyer_property text-center raleway_thin">Listed Property</p>
+                <div class="col-md-2 col-sm-2"></div>
+                <div class="col-md-3 col-sm-6 col-xs-12 buyer_prop text-center center-block">
+                    <div class="buyer_prop_inner">
+                        <img src="images/pic3.jpg" class="image_buyer">
+                    </div>
+                    <p class="dol">$ 600</p>
+                    <p>BTM Stage, Bangalore, 560071</p>
+                    <!-- <p>sdsada</p> -->
+                    <button id="bidder_bid3" class="ok_button">Details</button>
+                </div>
+                <div class="col-md-2 col-sm-2"></div>
+                <div class="col-md-3 col-sm-6 col-xs-12 buyer_prop text-center center-block">
+                    <div class="buyer_prop_inner">
+                        <img src="images/pic4.png" class="image_buyer">
+                    </div>
+                    <p class="dol">$ 400</p>
+                    <p>BTM Stage, Bangalore, 560071</p>
+                    <button id="bidder_bid2" class="ok_button">Details</button>
+                </div>
+                <div class="col-md-2 col-sm-2"></div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" id="bidder_bid3_file">
+            <img src="images/arrows.png" class="pull-left bidding_back arrow">
+            <div class="col-md-12 col-sm-12 col-xs-12 bidder_bid3_file_innr raleway_regular">
+                <div class="col-md-12 col-sm-12 col-xs-12 bidder_inner">
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                        <img src="images/pic3.jpg" class="biider_img">
+                    </div>
+                    <div class="col-md-2 col-sm-2"></div>
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12 home_page_right" id="clockdiv">
+                            <div class="col-md-3 col-sm-3 col-xs-3 homepage_days_date raleway_regular">
+                                <span id="countdown" class="home_page_days text-center"></span>
+                                <div class="smalltext raleway_light">Days</div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3 homepage_days_date raleway_regular text-center">
+                                <span id="countdown1" class="home_page_days text-center"></span>
+                                <div class="smalltext raleway_light">Hours</div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3 homepage_days_date raleway_regular text-center">
+                                <span id="countdown2" class="home_page_days text-center"></span>
+                                <div class="smalltext raleway_light">Minutes</div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3 homepage_days_date1 raleway_regular text-center">
+                                <span id="countdown3" class="home_page_days text-center"></span>
+                                <div class="smalltext raleway_light">Seconds</div>
+                            </div>
+                        </div>
+                        <p class="current_bidding raleway_semibold">Current Bidding: $ 600</p>
+                        <p class="current_bidding_inner raleway_semibold">Date: <span class="raleway_regular">20th Sept 2016</span></p>
+                        <p class="current_bidding_inner raleway_semibold">Location: <span class="raleway_regular">Bangalore</span></p>
+                        <p class="current_bidding_inner raleway_semibold">Square Footage: <span class="raleway_regular">1008</span></p>
+                        <p class="current_bidding_inner raleway_semibold">Year Built: <span class="raleway_regular">2005</span></p>
+                        <p class="current_bidding_inner raleway_semibold">Bedrooms: <span class="raleway_regular">3</span></p>
+                        <p>
+                            <form>
+                                <input type="number" name="" class="buyer_input" autofocus id="bid_input" required>
+                                <span class="dollar2">$</span>
+                                <button class="ok_button" id="bid_button" type="submit">BID</button>
+                            </form>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+        <div class="col-md-12 col-sm-12 col-xs-12" id="bidder_biding">
+            <img src="images/arrows.png" class="pull-left bidding_back2 arrow">
+            <div class="col-md-12 col-sm-12 col-xs-12 bidder_inner bidder_inner_1 raleway_regular">
+                <div class="col-md-5 col-sm-5 col-xs-12">
+                    <img src="images/pic4.png" class="biider_img">
+                </div>
+                <div class="col-md-2 col-sm-2"></div>
+                <div class="col-md-5 col-sm-5 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12 home_page_right" id="clockdiv">
+                        <div class="col-md-3 col-sm-3 col-xs-3 homepage_days_date raleway_regular">
+                            <span id="xcountdown" class="home_page_days text-center"></span>
+                            <div class="smalltext raleway_light">Days</div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 homepage_days_date raleway_regular text-center">
+                            <span id="xcountdown1" class="home_page_days text-center"></span>
+                            <div class="smalltext raleway_light">Hours</div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 homepage_days_date raleway_regular text-center">
+                            <span id="xcountdown2" class="home_page_days text-center"></span>
+                            <div class="smalltext raleway_light">Minutes</div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3 homepage_days_date1 raleway_regular text-center">
+                            <span id="xcountdown3" class="home_page_days text-center"></span>
+                            <div class="smalltext raleway_light">Seconds</div>
+                        </div>
+                    </div>
+                    <p class="current_bidding raleway_semibold">Current Bidding: $400</p>
+                    <p class="current_bidding_inner raleway_semibold">Date: <span class="raleway_regular">20th Sept 2016</span></p>
+                    <p class="current_bidding_inner raleway_semibold">Location: <span class="raleway_regular">Bangalore</span></p>
+                    <p class="current_bidding_inner raleway_semibold">Square Footage: <span class="raleway_regular">1008</span></p>
+                    <p class="current_bidding_inner raleway_semibold">Year Built: <span class="raleway_regular">2005</span></p>
+                    <p class="current_bidding_inner raleway_semibold">Bedrooms: <span class="raleway_regular">3</span></p>
+                    <p>
+                        <form>
+                            <input type="number" name="" class="buyer_input2" autofocus id="bid_input" required>
+                            <span class="dollar2">$</span>
+                            <button class="ok_button" id="bid_button2" type="submit">BID</button>
+                        </form>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="myModal22" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header confirm_head">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <!-- <h4 class="modal-title">Modal Header</h4> -->
+                    </div>
+                    <div class="modal-body text-center center-block raleway_regular">
+                        <p>Bidding Amount: $ <span id="bid_conform_text2"></span></p>
+                        <button id="submission2" data-dismiss="modal" class="ok_button">confirm</button>
+                        <button data-dismiss="modal" class="modal_rusure">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header confirm_head">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <!-- <h4 class="modal-title">Modal Header</h4> -->
+                    </div>
+                    <div class="modal-body text-center center-block raleway_regular">
+                        <p>Bidding Amount: $ <span id="bid_conform_text"></span></p>
+                        <button id="submission" data-dismiss="modal" class="ok_button">confirm</button>
+                        <button data-dismiss="modal" class="modal_rusure">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" id="set_submission">
+            <div class="col-md-6 col-sm-6 col-xs-12 text-center center-block happy raleway_regular">
+                <img src="images/arrows.png" class="pull-left set_back arrow">
+                <img src="images/happy.jpg" class="flow_split">
+                <p>UX for User with sucessful bidding experience</p>
+                <button id="submitted_successfully" class="ok_button1">Continue</button>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 text-center center-block sad raleway_regular">
+                <img src="images/sad.jpg" class="flow_split">
+                <p>UX for User with unsucessful bidding experience</p>
+                <button id="unsubmission" class="ok_button1">Continue</button>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" id="unsubmission_file">
+            <img src="images/arrows.png" class="pull-left unhappy_back arrow">
+            <div class="col-md-12 col-sm-12 col-xs-12 buyer  ">
+                <div class="col-md-2 col-sm-2"></div>
+                <div class="col-md-3 col-sm-6 col-xs-12 buyer_prop text-center center-block raleway_regular">
+                    <div class="buyer_prop_inner">
+                        <img src="images/pic3.jpg" class="image_buyer">
+                    </div>
+                    <p class="dol">$ 600</p>
+                    <p>BTM Stage, Bangalore, 560071</p>
+                    <!-- <p>sdsada</p> -->
+                    <button id="bidder_bid1" class="disable_button" disabled>Details <i class="fa fa-lock" aria-hidden="true"></i></button>
+                </div>
+                <div class="col-md-2 col-sm-2"></div>
+                <div class="col-md-3 col-sm-6 col-xs-12 buyer_prop text-center center-block raleway_regular">
+                    <div class="buyer_prop_inner">
+                        <img src="images/pic4.png" class="image_buyer">
+                    </div>
+                    <p class="dol">$ 400</p>
+                    <p>BTM Stage, Bangalore, 560071</p>
+                    <button id="bidder_bid2" class="disable_button" disabled>Details <i class="fa fa-lock" aria-hidden="true"></i></button>
+                </div>
+                <div class="col-md-2 col-sm-2"></div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center center-block raleway_regular" id="submitted_successfully_fil">
+            <img src="images/arrows.png" class="pull-left happy_back arrow">
+            <div class="final_choice col-md-6 col-md-offset-3">
+                <p class="revised_bid_para text-center">Revised bid from the owner is $550 </p>
+                <span class="span10 col-md-4"><button class="button ok_button">Accept</button></span>
+                <span class="col-md-4">
+                <button class="ok_button negotiate_butn" data-toggle="modal" data-target="#confirm">Negotiate</button>
+                </span>
+                <span class="span10 col-md-4"><button class="button1 modal_rusure final_denied">Denied</button></span>
+                <span class="span4">
+            <span class="alert alert-success fade alert_success">
+              <button type="button" class="close" data-dismiss="alert">*</button>
+              <strong>Bidding Successfully!</strong>
+            </span>
+                </span>
+                <div class="span4">
+                    <span class="alert1 alert-danger fade ">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <strong>Denied Successfully!</strong>
+            </span></div>
+            </div>
+        </div>
+        <!-- Modal confirm-->
+        <div id="confirm" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header confirm_head text-center">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title raleway_regular">Final Negotiation Amount:</h4>
+                    </div>
+                    <div class="modal-body text-center center-block raleway_regular">
+                        <p>
+                            <input type="number" name="" class="updated_bid" autofocus="" required>
+                        </p>
+                        <span class="span10"><button class="button2 ok_button" id="negotiate_done">Confirm</button></span>
+                        <button data-dismiss="modal" class="modal_rusure">Cancel</button>
+                        <div class="span4">
+                            <div class="alert2 alert-success fade">
+                                <button type="button" class="close" data-dismiss="alert">*</button>
+                                <strong>Successfully Sent!</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+
+</html>

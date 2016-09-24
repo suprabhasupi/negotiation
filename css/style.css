@@ -1,0 +1,636 @@
+.back_button {
+  position: relative;
+  left: 2em;
+  cursor: pointer; }
+
+.input-width, #owner .seller_second_page table input[type="text"], #owner .seller_second_page table input[type="number"] {
+  width: 75%;
+  text-indent: 8px; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.padding_zero {
+  padding: 0 !important; }
+
+.float_right, .first_page footer .social, #owner footer .social, #buyerlist footer .social, .buyer footer .social, #owner_end footer .social, #seller_list footer .social, #unsuccessfully_seller_list footer .social, #property_details footer .social, #options_list footer .social {
+  float: right; }
+
+.text-center, #owner .center {
+  text-align: center; }
+
+td {
+  padding: 0px 6px; }
+
+.input-field {
+  margin-top: 0; }
+
+img.activist {
+  width: 70%; }
+
+body {
+  overflow: hidden; }
+
+.profile_img, #owner header img.profile_img {
+  border-radius: 50%;
+  position: relative;
+  left: 1em;
+  top: -.1em; }
+
+.first_page {
+  background-image: url(../img/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+  .first_page header {
+    /* background: rgba(255, 255, 255, 0.88); */
+    background: rgba(84, 84, 84, 0.88);
+    background: rgba(255, 255, 255, 0.88); }
+    .first_page header img {
+      width: 50px;
+      height: 50px;
+      margin-top: 7px;
+      margin-left: 1em;
+      position: relative;
+      top: 0px; }
+    .first_page header .signin, .first_page header .account, .first_page header .account1, .first_page #owner header .account, #owner .first_page header .account, .first_page #owner header .account1, #owner .first_page header .account1, .first_page #buyerlist header .account, #buyerlist .first_page header .account, .first_page #buyerlist header .account1, #buyerlist .first_page header .account1, .first_page #owner_end header .account, #owner_end .first_page header .account, .first_page #owner_end header .account1, #owner_end .first_page header .account1, .first_page #seller_list header .account, #seller_list .first_page header .account, .first_page #unsuccessfully_seller_list header .account, #unsuccessfully_seller_list .first_page header .account, .first_page #seller_list header .account1, #seller_list .first_page header .account1, .first_page #unsuccessfully_seller_list header .account1, #unsuccessfully_seller_list .first_page header .account1, .first_page #property_details header .account, #property_details .first_page header .account, .first_page #property_details header .account1, #property_details .first_page header .account1, .first_page #options_list header .account, #options_list .first_page header .account, .first_page #options_list header .account1, #options_list .first_page header .account1 {
+      margin: .1em 2em 0em 1em;
+      float: right;
+      cursor: pointer;
+      position: relative;
+      top: 20px; }
+    .first_page header .account {
+      top: 0px; }
+  .first_page .first_page_inner .first_page_content {
+    font-size: 3em;
+    color: black;
+    margin-top: 24%;
+    border: 1px solid rgba(255, 255, 255, 0.63);
+    background: rgba(255, 255, 255, 0.63); }
+  .first_page .first_page_inner a.button_sell {
+    margin: 2em 1em 12.59em 1em; }
+  .first_page footer .footer {
+    /* background: rgba(255, 255, 255, 0.7); */
+    background: rgba(84, 84, 84, 0.88);
+    height: 3em;
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+  .first_page footer .social {
+    position: relative;
+    bottom: 2em;
+    font-size: 1.5em;
+    left: -3em; }
+    .first_page footer .social .zmdi-facebook, .first_page footer .social .zmdi-instagram, .first_page #owner footer .social .zmdi-instagram, #owner .first_page footer .social .zmdi-instagram, .first_page #buyerlist footer .social .zmdi-instagram, #buyerlist .first_page footer .social .zmdi-instagram, .first_page #owner_end footer .social .zmdi-instagram, #owner_end .first_page footer .social .zmdi-instagram, .first_page #seller_list footer .social .zmdi-instagram, #seller_list .first_page footer .social .zmdi-instagram, .first_page #unsuccessfully_seller_list footer .social .zmdi-instagram, #unsuccessfully_seller_list .first_page footer .social .zmdi-instagram, .first_page #property_details footer .social .zmdi-instagram, #property_details .first_page footer .social .zmdi-instagram, .first_page #options_list footer .social .zmdi-instagram, #options_list .first_page footer .social .zmdi-instagram {
+      margin: 0 1em; }
+    .first_page footer .social :hover {
+      color: #0070ff;
+      cursor: pointer; }
+  .first_page footer .footer {
+    background: rgba(255, 255, 255, 0.88); }
+
+#owner {
+  background-image: url(../img/bg3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: none; }
+  #owner header {
+    /* background: rgba(255, 255, 255, 0.88); */
+    background: rgba(84, 84, 84, 0.88);
+    background: rgba(193, 188, 188, 0.88); }
+    #owner header img {
+      width: 50px;
+      height: 50px;
+      margin-top: 7px;
+      margin-left: 1em;
+      position: relative;
+      top: 0px; }
+    #owner header .signin, #owner header .account, #owner header .account1 {
+      margin: .1em 2em 0em 1em;
+      float: right;
+      cursor: pointer;
+      position: relative;
+      top: 20px; }
+    #owner header .account {
+      top: 0px; }
+  #owner .seller_second_page {
+    background: rgba(0, 0, 0, 0.61);
+    color: white;
+    margin-top: 1.2em; }
+    #owner .seller_second_page .property {
+      font-size: 2em;
+      margin: 10px 0; }
+    #owner .seller_second_page table {
+      width: 100%;
+      margin: 4.2% 2%; }
+      #owner .seller_second_page table td.td_label {
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 1.1em;
+        width: 40%;
+        position: relative;
+        left: 3em; }
+      #owner .seller_second_page table td#bidding_detail {
+        display: none; }
+  #owner footer .footer {
+    /* background: rgba(255, 255, 255, 0.7); */
+    background: rgba(84, 84, 84, 0.88);
+    height: 3em;
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+  #owner footer .social {
+    position: relative;
+    bottom: 2em;
+    font-size: 1.5em;
+    left: -3em; }
+    #owner footer .social .zmdi-facebook, #owner footer .social .zmdi-instagram {
+      margin: 0 1em; }
+    #owner footer .social :hover {
+      color: #0070ff;
+      cursor: pointer; }
+  #owner .confrm_cont {
+    margin-top: 1.5em; }
+  #owner .confirmation_modal {
+    margin-top: 3em;
+    font-size: 1.2em;
+    color: #3c3939;
+    margin-left: 4em;
+    line-height: 1.8em; }
+  #owner .confrm {
+    margin-right: 2em; }
+  #owner .cancl {
+    position: relative;
+    right: 2em; }
+
+#buyerlist {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: white;
+  height: 100vh; }
+  #buyerlist header {
+    /* background: rgba(255, 255, 255, 0.88); */
+    background: rgba(84, 84, 84, 0.88); }
+    #buyerlist header img {
+      width: 50px;
+      height: 50px;
+      margin-top: 7px;
+      margin-left: 1em;
+      position: relative;
+      top: 0px; }
+    #buyerlist header .signin, #buyerlist header .account, #buyerlist header .account1 {
+      margin: .1em 2em 0em 1em;
+      float: right;
+      cursor: pointer;
+      position: relative;
+      top: 20px; }
+    #buyerlist header .account {
+      top: 0px; }
+  #buyerlist .main_row {
+    margin: 3.5em 0; }
+  #buyerlist .seller_card {
+    padding: 0; }
+    #buyerlist .seller_card .card_img_sellr {
+      height: 190px;
+      overflow: hidden; }
+    #buyerlist .seller_card .seller_card_content {
+      padding: 0 7px; }
+    #buyerlist .seller_card .card-title {
+      font-size: 1.2em; }
+    #buyerlist .seller_card .negotiate_close {
+      float: right; }
+    #buyerlist .seller_card .revised_bid_amt {
+      margin-top: 4em;
+      font-size: 1.2em; }
+    #buyerlist .seller_card .confirm_btn {
+      position: relative;
+      left: 1.85em;
+      top: 2em; }
+    #buyerlist .seller_card .negotiate_button {
+      padding: 0px 11px;
+      font-size: 10px;
+      position: relative;
+      left: 6em;
+      margin-top: 1em;
+      margin-Bottom: 1em; }
+  #buyerlist footer .footer {
+    /* background: rgba(255, 255, 255, 0.7); */
+    background: rgba(84, 84, 84, 0.88);
+    height: 3em;
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+  #buyerlist footer .social {
+    position: relative;
+    bottom: 2em;
+    font-size: 1.5em;
+    left: -3em; }
+    #buyerlist footer .social .zmdi-facebook, #buyerlist footer .social .zmdi-instagram {
+      margin: 0 1em; }
+    #buyerlist footer .social :hover {
+      color: #0070ff;
+      cursor: pointer; }
+
+.picker__date-display {
+  padding-bottom: 5px; }
+
+.picker__weekday-display {
+  margin-bottom: 0; }
+
+.picker__calendar-container {
+  padding: 0 1rem;
+  height: 19em;
+  border-bottom: 1px solid #cecaca; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.buyer {
+  background-image: url(../img/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: none; }
+  .buyer header {
+    /* background: rgba(255, 255, 255, 0.88); */
+    background: rgba(84, 84, 84, 0.88);
+    background: rgba(193, 188, 188, 0.88); }
+    .buyer header img {
+      width: 50px;
+      height: 50px;
+      margin-top: 7px;
+      margin-left: 1em;
+      position: relative;
+      top: 0px; }
+    .buyer header .signin, .buyer .first_page header .account, .first_page .buyer header .account, .buyer .first_page header .account1, .first_page .buyer header .account1, .buyer #owner header .account, #owner .buyer header .account, .buyer #owner header .account1, #owner .buyer header .account1, .buyer #buyerlist header .account, #buyerlist .buyer header .account, .buyer #buyerlist header .account1, #buyerlist .buyer header .account1, .buyer header .account, .buyer header .account1, .buyer #owner_end header .account, #owner_end .buyer header .account, .buyer #owner_end header .account1, #owner_end .buyer header .account1, .buyer #seller_list header .account, #seller_list .buyer header .account, .buyer #unsuccessfully_seller_list header .account, #unsuccessfully_seller_list .buyer header .account, .buyer #seller_list header .account1, #seller_list .buyer header .account1, .buyer #unsuccessfully_seller_list header .account1, #unsuccessfully_seller_list .buyer header .account1, .buyer #property_details header .account, #property_details .buyer header .account, .buyer #property_details header .account1, #property_details .buyer header .account1, .buyer #options_list header .account, #options_list .buyer header .account, .buyer #options_list header .account1, #options_list .buyer header .account1 {
+      margin: .1em 2em 0em 1em;
+      float: right;
+      cursor: pointer;
+      position: relative;
+      top: 20px; }
+    .buyer header .account {
+      top: 0px; }
+  .buyer .first_page_content {
+    font-size: 2.5em;
+    margin-top: 11%; }
+  .buyer .input_fld {
+    margin-bottom: 12em; }
+    .buyer .input_fld .input_buyer {
+      padding: 0;
+      margin-bottom: 2em; }
+      .buyer .input_fld .input_buyer input#autocomplete2 {
+        position: relative;
+        left: 4em;
+        text-indent: 8px;
+        top: .8em; }
+    .buyer .input_fld .search_btn {
+      padding: 0px 1em;
+      height: 51px;
+      position: relative;
+      left: -2em;
+      top: 8px; }
+  .buyer footer .footer {
+    /* background: rgba(255, 255, 255, 0.7); */
+    background: rgba(84, 84, 84, 0.88);
+    height: 3em;
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+  .buyer footer .social {
+    position: relative;
+    bottom: 2em;
+    font-size: 1.5em;
+    left: -3em; }
+    .buyer footer .social .zmdi-facebook, .buyer .first_page footer .social .zmdi-instagram, .first_page .buyer footer .social .zmdi-instagram, .buyer #owner footer .social .zmdi-instagram, #owner .buyer footer .social .zmdi-instagram, .buyer #buyerlist footer .social .zmdi-instagram, #buyerlist .buyer footer .social .zmdi-instagram, .buyer footer .social .zmdi-instagram, .buyer #owner_end footer .social .zmdi-instagram, #owner_end .buyer footer .social .zmdi-instagram, .buyer #seller_list footer .social .zmdi-instagram, #seller_list .buyer footer .social .zmdi-instagram, .buyer #unsuccessfully_seller_list footer .social .zmdi-instagram, #unsuccessfully_seller_list .buyer footer .social .zmdi-instagram, .buyer #property_details footer .social .zmdi-instagram, #property_details .buyer footer .social .zmdi-instagram, .buyer #options_list footer .social .zmdi-instagram, #options_list .buyer footer .social .zmdi-instagram {
+      margin: 0 1em; }
+    .buyer footer .social :hover {
+      color: #0070ff;
+      cursor: pointer; }
+
+#owner_end {
+  background: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: 99; }
+  #owner_end header {
+    /* background: rgba(255, 255, 255, 0.88); */
+    background: rgba(84, 84, 84, 0.88);
+    background: rgba(193, 188, 188, 0.88); }
+    #owner_end header img {
+      width: 50px;
+      height: 50px;
+      margin-top: 7px;
+      margin-left: 1em;
+      position: relative;
+      top: 0px; }
+    #owner_end header .signin, #owner_end header .account, #owner_end header .account1 {
+      margin: .1em 2em 0em 1em;
+      float: right;
+      cursor: pointer;
+      position: relative;
+      top: 20px; }
+    #owner_end header .account {
+      top: 0px; }
+  #owner_end .congrates_main {
+    margin-top: 15%; }
+    #owner_end .congrates_main .congrates {
+      font-size: 2.5em; }
+  #owner_end footer .footer {
+    /* background: rgba(255, 255, 255, 0.7); */
+    background: rgba(84, 84, 84, 0.88);
+    height: 3em;
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+  #owner_end footer .social {
+    position: relative;
+    bottom: 2em;
+    font-size: 1.5em;
+    left: -3em; }
+    #owner_end footer .social .zmdi-facebook, #owner_end footer .social .zmdi-instagram {
+      margin: 0 1em; }
+    #owner_end footer .social :hover {
+      color: #0070ff;
+      cursor: pointer; }
+
+.waves-effect {
+  z-index: 0; }
+
+.waves-effect {
+  z-index: 0; }
+
+#seller_list, #unsuccessfully_seller_list {
+  display: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: white; }
+  #seller_list .listed_property, #unsuccessfully_seller_list .listed_property {
+    font-size: 2.5em;
+    margin-top: 0; }
+  #seller_list .sharing, #unsuccessfully_seller_list .sharing {
+    position: absolute;
+    right: 0;
+    font-size: 1.5em; }
+    #seller_list .sharing .zmdi-share, #unsuccessfully_seller_list .sharing .zmdi-share, #seller_list .sharing .zmdi-favorite, #unsuccessfully_seller_list .sharing .zmdi-favorite, #seller_list #options_list #unsucess .sharing .zmdi-favorite, #options_list #unsucess #seller_list .sharing .zmdi-favorite, #unsuccessfully_seller_list #options_list #unsucess .sharing .zmdi-favorite, #options_list #unsucess #unsuccessfully_seller_list .sharing .zmdi-favorite {
+      margin: 0 .5em; }
+    #seller_list .sharing .zmdi-favorite:hover, #unsuccessfully_seller_list .sharing .zmdi-favorite:hover {
+      color: #ef1010; }
+    #seller_list .sharing .zmdi-favorite:focus, #unsuccessfully_seller_list .sharing .zmdi-favorite:focus {
+      color: #ef1010; }
+  #seller_list .listd_prop_rit, #unsuccessfully_seller_list .listd_prop_rit {
+    margin-left: 3.5em; }
+  #seller_list header, #unsuccessfully_seller_list header {
+    /* background: rgba(255, 255, 255, 0.88); */
+    background: rgba(84, 84, 84, 0.88); }
+    #seller_list header img, #unsuccessfully_seller_list header img {
+      width: 50px;
+      height: 50px;
+      margin-top: 7px;
+      margin-left: 1em;
+      position: relative;
+      top: 0px; }
+    #seller_list header .signin, #unsuccessfully_seller_list header .signin, #seller_list header .account, #unsuccessfully_seller_list header .account, #seller_list header .account1, #unsuccessfully_seller_list header .account1 {
+      margin: .1em 2em 0em 1em;
+      float: right;
+      cursor: pointer;
+      position: relative;
+      top: 20px; }
+    #seller_list header .account, #unsuccessfully_seller_list header .account {
+      top: 0px; }
+  #seller_list footer .footer, #unsuccessfully_seller_list footer .footer {
+    /* background: rgba(255, 255, 255, 0.7); */
+    background: rgba(84, 84, 84, 0.88);
+    height: 3em;
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+  #seller_list footer .social, #unsuccessfully_seller_list footer .social {
+    position: relative;
+    bottom: 2em;
+    font-size: 1.5em;
+    left: -3em; }
+    #seller_list footer .social .zmdi-facebook, #unsuccessfully_seller_list footer .social .zmdi-facebook, #seller_list footer .social .zmdi-instagram, #unsuccessfully_seller_list footer .social .zmdi-instagram {
+      margin: 0 1em; }
+    #seller_list footer .social :hover, #unsuccessfully_seller_list footer .social :hover {
+      color: #0070ff;
+      cursor: pointer; }
+
+#property_details {
+  display: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: white; }
+  #property_details header {
+    /* background: rgba(255, 255, 255, 0.88); */
+    background: rgba(84, 84, 84, 0.88); }
+    #property_details header img {
+      width: 50px;
+      height: 50px;
+      margin-top: 7px;
+      margin-left: 1em;
+      position: relative;
+      top: 0px; }
+    #property_details header .signin, #property_details header .account, #property_details header .account1 {
+      margin: .1em 2em 0em 1em;
+      float: right;
+      cursor: pointer;
+      position: relative;
+      top: 20px; }
+    #property_details header .account {
+      top: 0px; }
+  #property_details .prop_hdr {
+    font-size: 2em;
+    margin-left: 2em;
+    margin-top: 0; }
+  #property_details .home_page_right {
+    border: 1px solid #eaeaea; }
+    #property_details .home_page_right .homepage_days_date {
+      border-right: 1px solid #eaeaea; }
+      #property_details .home_page_right .homepage_days_date .home_page_days {
+        font-size: 2em;
+        color: #08a1ec; }
+    #property_details .home_page_right .homepage_days_date1 .home_page_days {
+      font-size: 2em;
+      color: #08a1ec; }
+  #property_details table.buyer_table {
+    width: 53%;
+    margin-top: 15%;
+    font-size: 1.13em; }
+    #property_details table.buyer_table td.td_buyer {
+      font-weight: 600; }
+  #property_details .input_fld {
+    margin-top: 2em; }
+  #property_details .bid_btn {
+    position: relative;
+    left: 20em;
+    top: -3.7em; }
+  #property_details footer .footer {
+    /* background: rgba(255, 255, 255, 0.7); */
+    background: rgba(84, 84, 84, 0.88);
+    height: 3em;
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+  #property_details footer .social {
+    position: relative;
+    bottom: 2em;
+    font-size: 1.5em;
+    left: -3em; }
+    #property_details footer .social .zmdi-facebook, #property_details footer .social .zmdi-instagram {
+      margin: 0 1em; }
+    #property_details footer .social :hover {
+      color: #0070ff;
+      cursor: pointer; }
+  #property_details .cancl {
+    margin-right: 14em; }
+  #property_details .contnu {
+    margin-right: 2em; }
+
+#options_list {
+  display: none;
+  background: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+  #options_list #unsucess {
+    display: none;
+    overflow: hidden; }
+    #options_list #unsucess .listed_property {
+      font-size: 2.5em;
+      margin-top: 0; }
+    #options_list #unsucess .sharing {
+      position: absolute;
+      right: 0;
+      font-size: 1.5em; }
+      #options_list #unsucess .sharing .zmdi-share, #options_list #unsucess .sharing .zmdi-favorite {
+        margin: 0 .5em; }
+      #options_list #unsucess .sharing .zmdi-favorite:hover {
+        color: #ef1010; }
+      #options_list #unsucess .sharing .zmdi-favorite:focus {
+        color: #ef1010; }
+    #options_list #unsucess .listd_prop_rit {
+      margin-left: 3.5em; }
+  #options_list header {
+    /* background: rgba(255, 255, 255, 0.88); */
+    background: rgba(84, 84, 84, 0.88); }
+    #options_list header img {
+      width: 50px;
+      height: 50px;
+      margin-top: 7px;
+      margin-left: 1em;
+      position: relative;
+      top: 0px; }
+    #options_list header .signin, #options_list header .account, #options_list header .account1 {
+      margin: .1em 2em 0em 1em;
+      float: right;
+      cursor: pointer;
+      position: relative;
+      top: 20px; }
+    #options_list header .account {
+      top: 0px; }
+  #options_list .switch {
+    position: absolute;
+    right: 4em;
+    top: 85%; }
+  #options_list .revised_bt {
+    font-size: 2.5em;
+    margin-top: 10%; }
+  #options_list .allbtn .options_button {
+    margin: 0 1em; }
+  #options_list footer .footer {
+    /* background: rgba(255, 255, 255, 0.7); */
+    background: rgba(84, 84, 84, 0.88);
+    height: 3em;
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+  #options_list footer .social {
+    position: relative;
+    bottom: 2em;
+    font-size: 1.5em;
+    left: -3em; }
+    #options_list footer .social .zmdi-facebook, #options_list footer .social .zmdi-instagram {
+      margin: 0 1em; }
+    #options_list footer .social :hover {
+      color: #0070ff;
+      cursor: pointer; }
+  #options_list .amount_last {
+    margin-top: 2em; }
+  #options_list .modal-footer {
+    margin-left: -10.5em; }
+    #options_list .modal-footer .cancl_btn {
+      margin: 0 2em; }
+    #options_list .modal-footer .send_btn {
+      margin: 0 2em; }
+
+#unsuccessfully_seller_list {
+  display: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: white; }
+  #unsuccessfully_seller_list .zmdi-lock-outline {
+    color: #1b1b1b;
+    position: relative;
+    left: 15px; }
+
+.carousel.carousel-slider {
+  height: 400px !important;
+  width: 90%;
+  margin-left: 3em; }
+
+.carousel .indicators .indicator-item.active {
+  background: #05d1ff; }
+
+.carousel .indicators .indicator-item {
+  background: white;
+  margin: 5px; }
