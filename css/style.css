@@ -91,7 +91,7 @@ body {
     left: -3em; }
     .first_page footer .social .zmdi-facebook, .first_page footer .social .zmdi-instagram, .first_page #owner footer .social .zmdi-instagram, #owner .first_page footer .social .zmdi-instagram, .first_page #buyerlist footer .social .zmdi-instagram, #buyerlist .first_page footer .social .zmdi-instagram, .first_page #owner_end footer .social .zmdi-instagram, #owner_end .first_page footer .social .zmdi-instagram, .first_page #seller_list footer .social .zmdi-instagram, #seller_list .first_page footer .social .zmdi-instagram, .first_page #unsuccessfully_seller_list footer .social .zmdi-instagram, #unsuccessfully_seller_list .first_page footer .social .zmdi-instagram, .first_page #property_details footer .social .zmdi-instagram, #property_details .first_page footer .social .zmdi-instagram, .first_page #options_list footer .social .zmdi-instagram, #options_list .first_page footer .social .zmdi-instagram {
       margin: 0 1em; }
-    .first_page footer .social :hover {
+    .first_page footer .social:hover {
       color: #0070ff;
       cursor: pointer; }
   .first_page footer .footer {
@@ -160,13 +160,13 @@ body {
     left: -3em; }
     #owner footer .social .zmdi-facebook, #owner footer .social .zmdi-instagram {
       margin: 0 1em; }
-    #owner footer .social :hover {
+    #owner footer .social:hover {
       color: #0070ff;
       cursor: pointer; }
   #owner .confrm_cont {
-    margin-top: 1.5em; }
+    margin-top: .5em; }
   #owner .confirmation_modal {
-    margin-top: 3em;
+    margin-top: 1.5em;
     font-size: 1.2em;
     color: #3c3939;
     margin-left: 4em;
@@ -214,7 +214,10 @@ body {
     #buyerlist .seller_card .card-title {
       font-size: 1.2em; }
     #buyerlist .seller_card .negotiate_close {
-      float: right; }
+      float: right;
+      position: relative;
+      top: -1.5em;
+      left: 9px; }
     #buyerlist .seller_card .revised_bid_amt {
       margin-top: 4em;
       font-size: 1.2em; }
@@ -243,7 +246,7 @@ body {
     left: -3em; }
     #buyerlist footer .social .zmdi-facebook, #buyerlist footer .social .zmdi-instagram {
       margin: 0 1em; }
-    #buyerlist footer .social :hover {
+    #buyerlist footer .social:hover {
       color: #0070ff;
       cursor: pointer; }
 
@@ -323,7 +326,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: -3em; }
     .buyer footer .social .zmdi-facebook, .buyer .first_page footer .social .zmdi-instagram, .first_page .buyer footer .social .zmdi-instagram, .buyer #owner footer .social .zmdi-instagram, #owner .buyer footer .social .zmdi-instagram, .buyer #buyerlist footer .social .zmdi-instagram, #buyerlist .buyer footer .social .zmdi-instagram, .buyer footer .social .zmdi-instagram, .buyer #owner_end footer .social .zmdi-instagram, #owner_end .buyer footer .social .zmdi-instagram, .buyer #seller_list footer .social .zmdi-instagram, #seller_list .buyer footer .social .zmdi-instagram, .buyer #unsuccessfully_seller_list footer .social .zmdi-instagram, #unsuccessfully_seller_list .buyer footer .social .zmdi-instagram, .buyer #property_details footer .social .zmdi-instagram, #property_details .buyer footer .social .zmdi-instagram, .buyer #options_list footer .social .zmdi-instagram, #options_list .buyer footer .social .zmdi-instagram {
       margin: 0 1em; }
-    .buyer footer .social :hover {
+    .buyer footer .social:hover {
       color: #0070ff;
       cursor: pointer; }
 
@@ -376,7 +379,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: -3em; }
     #owner_end footer .social .zmdi-facebook, #owner_end footer .social .zmdi-instagram {
       margin: 0 1em; }
-    #owner_end footer .social :hover {
+    #owner_end footer .social:hover {
       color: #0070ff;
       cursor: pointer; }
 
@@ -444,7 +447,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: -3em; }
     #seller_list footer .social .zmdi-facebook, #unsuccessfully_seller_list footer .social .zmdi-facebook, #seller_list footer .social .zmdi-instagram, #unsuccessfully_seller_list footer .social .zmdi-instagram {
       margin: 0 1em; }
-    #seller_list footer .social :hover, #unsuccessfully_seller_list footer .social :hover {
+    #seller_list footer .social:hover, #unsuccessfully_seller_list footer .social:hover {
       color: #0070ff;
       cursor: pointer; }
 
@@ -517,7 +520,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: -3em; }
     #property_details footer .social .zmdi-facebook, #property_details footer .social .zmdi-instagram {
       margin: 0 1em; }
-    #property_details footer .social :hover {
+    #property_details footer .social:hover {
       color: #0070ff;
       cursor: pointer; }
   #property_details .cancl {
@@ -595,7 +598,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: -3em; }
     #options_list footer .social .zmdi-facebook, #options_list footer .social .zmdi-instagram {
       margin: 0 1em; }
-    #options_list footer .social :hover {
+    #options_list footer .social:hover {
       color: #0070ff;
       cursor: pointer; }
   #options_list .amount_last {
